@@ -2,7 +2,9 @@
     import { ref } from "vue";
     const counter = ref(0);
     const plus = () => counter.value++;
-    const minus = () => (counter.value == 0) ? alert("Ho puedes dar más dislikes") : counter.value--;
+    const minus = () => (counter.value == 0) ?
+        alert("Ho puedes dar más dislikes") : 
+        counter.value--;
 </script>
 
 <template>
