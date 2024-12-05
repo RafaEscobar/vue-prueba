@@ -10,14 +10,19 @@
 </script>
 
 <template>
- <div>
-    <h1>Lista de tareas</h1>
-    <input type="text" name="inputTask" id="inputTask"
-      v-model="newTask" @keyup.enter="addTask"><br>
+ <div class="p-6">
+    <h1 class="text-xl">Lista de tareas</h1>
+    <input type="text"
+      name="inputTask"
+      id="inputTask"
+      v-model="newTask"
+      @keyup.enter="addTask"
+      class="border-2 border-blue-200 rounded-lg"><br>
     <ul>
-      <li v-for="(task, index) in tasks" :key="index">
+      <li v-for="(task, index) in tasks" :key="index" class="my-2">
         {{ task }}
-        <button @click="deleteTask">Eliminar</button>
+        <button @click="deleteTask" 
+        class="bg-red-400 rounded-lg px-2">Eliminar</button>
       </li>
     </ul>
  </div>
