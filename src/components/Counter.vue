@@ -8,9 +8,13 @@
 </script>
 
 <template>
-    <h1>Likes: {{ counter }}</h1> <br>
-    <p><button @click="plus">Like</button></p>
-    <p><button @click="minus">Dislike</button></p>
+    <div class="p-6">
+        <h1>Likes: {{ counter }}</h1> <br>
+        <div class="w-40 flex justify-between">
+            <button @click="plus" class="bg-blue-400 text-white rounded-lg px-4 py-1">Like</button>
+            <button @click="minus" class="bg-red-400 rounded-lg px-4 py-1">Dislike</button>
+        </div>
+    </div>
 </template>
 
 <style scoped>
