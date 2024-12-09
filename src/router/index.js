@@ -4,11 +4,8 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      //? El path que usaremos para navegar
       path: '/counter',
-      //? El nombre de la ruta
       name: 'counter',
-      //? Ruta física del archivo que usa esta ruta
       component: () => import('../modules/counter/components/Counter.vue'),
     },
     {
@@ -16,6 +13,11 @@ const router = createRouter({
       name: 'todolist',
       component: () => import('../modules/todolist/components/TodoList.vue'),
     },
+    {
+      path: '/register',
+      name: 'register',
+      component: () => import('../modules/register/views/FormView.vue')
+    }
   ],
 })
 
