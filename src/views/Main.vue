@@ -4,9 +4,7 @@ import SiderBar from '@/components/SiderBar.vue';
 
 <template>
     <SiderBar />
-    <div>
-        <RouterView />
-    </div>
+    <RouterView />
 </template>
 
 <style scoped>
