@@ -1,27 +1,34 @@
 <script setup>
+    import {Form, Field, ErrorMessage} from 'vee-validate';
+    import { schema } from '../schemas/validateSchema';
+    const onSubmit = () => alert("Se enviaron los datos");
 </script>
 
 <template>
     <div class="pt-8">
         <h1 class="text-center">Formulario de registro</h1>
         <div class="w-full flex justify-center">
-            <form action="" >
+            <Form :validation-schema="schema" @submit="onSubmit">
                 <div class="pt-6 pb-4">
-                    <label for="">
+                    <label>
                         Nombre:
-                        <input type="text" class="border-2 border-blue-200 rounded-lg">
+                        <Field type="text" class="border-2 border-blue-200 rounded-lg" name="name" />
+                        <ErrorMessage name="name"/>
                     </label>
                 </div>
                 <div class="pb-4">
-                    <label for="">
+                    <label>
                         Correo electrónico:
-                        <input type="email" class="border-2 border-blue-200 rounded-lg">
+                        <Field type="email" class="border-2 border-blue-200 rounded-lg" name="email" />
+                        <ErrorMessage name="email" />
                     </label>
                 </div>
                 <div class="text-center">
-                    <button type="submit" class="bg-blue-400 text-white rounded-lg px-4 py-1 w-full">Enviar</button>
+                    <button type="submit" class="bg-blue-400 text-white rounded-lg px-4 py-1 w-full">
+                        Enviar
+                    </button>
                 </div>
-            </form>
+            </Form>
         </div>
     </div>
 </template>
